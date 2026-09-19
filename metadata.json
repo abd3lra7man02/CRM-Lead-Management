@@ -1,0 +1,6 @@
+{
+  "name": "SDR Shift CRM & Mobile Bridge",
+  "description": "Production-ready SDR CRM & Shift Dashboard Windows application with CustomTkinter UI, SQLite, FastAPI background sync bridge, and PyInstaller configuration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "SDR Shift CRM - Web Dialer Bridge",
+  "version": "1.0.0",
+  "description": "Automatically hooks into web dialer Call and Hang Up events to log dials and shift timestamps to your local FastAPI SDR CRM at http://127.0.0.1:8000/api/log_call.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:8000/*",
+    "http://localhost:8000/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SDR Desktop CRM Bridge"
+  }
+}
